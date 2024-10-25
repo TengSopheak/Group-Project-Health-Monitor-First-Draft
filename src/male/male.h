@@ -5,14 +5,21 @@
 using namespace std;
 
 class Male : public Child{
+	private:
+		bool isHeartRateNormal;
+		bool isBloodPressureNormal;
+		bool isTemperatureNormal;
+
 	public:
-		bool isHeartRateNormal = false;
-		bool isBloodPressureNormal = false;
-		bool isTemperatureNormal = false;
+		Male();
 
 		void heartRate(int age, int bpm);
 		void bloodPressure(int age, int sys, int dia);
 		void temperature(int age, double temp);
+
+		bool getHeartRateNormal() const;
+		bool getBloodPressureNormal() const;
+		bool getTemperatureNormal() const;
 };
 
 #endif

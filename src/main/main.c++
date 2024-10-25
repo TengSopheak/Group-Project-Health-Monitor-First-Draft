@@ -1,13 +1,16 @@
 #include <iostream>
 #include <string>
+
 #include "../child/child.h"
 #include "../female/female.h"
 #include "../male/male.h"
 #include "../func/function.h"
+
 using namespace std;
 
 int main() {
-	Child child; // Create instance of class
+	// Create instances of classes
+	Child child;
 	Male male;
 	Female female;
 
@@ -60,7 +63,7 @@ int main() {
     		child.bloodPressure(ageGroup, sys, dia);
     		child.temperature(ageGroup, temp);
 
-    		displayHealth(child.isHeartRateNormal, child.isBloodPressureNormal, child.isTemperatureNormal);
+    		displayHealth(child.getHeartRateNormal(), child.getBloodPressureNormal(), child.getTemperatureNormal());
 
     	} else {
     		cout << "What is your exact age? (18 or above): ";
@@ -71,13 +74,13 @@ int main() {
     			male.bloodPressure(exactAge, sys, dia);
     			male.temperature(exactAge, temp);
 
-    			displayHealth(male.isHeartRateNormal, male.isBloodPressureNormal, male.isTemperatureNormal);
+    			displayHealth(male.getHeartRateNormal(), male.getBloodPressureNormal(), male.getTemperatureNormal());
     		} else {
     			female.heartRate(exactAge, bpm);
     			female.bloodPressure(exactAge, sys, dia);
     			female.temperature(exactAge, temp);
 
-    			displayHealth(female.isHeartRateNormal, female.isBloodPressureNormal, female.isTemperatureNormal);
+    			displayHealth(female.getHeartRateNormal(), female.getBloodPressureNormal(), female.getTemperatureNormal());
     		}
     	}
 

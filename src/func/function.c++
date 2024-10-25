@@ -33,7 +33,6 @@ string assignAgeGroup(int ageGroup) {
         "Adult",
         "Older Adult"
     };
-
     return ageGroupArray[ageGroup - 1];
 }
 
